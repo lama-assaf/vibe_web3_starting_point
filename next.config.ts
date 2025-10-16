@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: '/vibe_web3_starting_point',
   assetPrefix: '/vibe_web3_starting_point/',
+  images: {
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
