@@ -1,26 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@keyframes scroll-bg {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes bobbing {
+  0%, 100% { transform: translateY(-4%); }
+  50% { transform: translateY(4%); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .animate-scroll-bg {
+    animation: scroll-bg 20s linear infinite;
+  }
+  .animate-bobbing {
+    animation: bobbing 2s ease-in-out infinite;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #2c3e50; /* A dark blue-gray fallback */
 }

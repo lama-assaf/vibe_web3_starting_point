@@ -1,0 +1,13 @@
+{
+  // Define custom profiles for macOS
+  "terminal.integrated.profiles.osx": {
+    "nvm-zsh": {
+      "path": "zsh",
+      "icon": "terminal-tmux", // A common icon for Zsh, or use "terminal"
+      "args": ["-c", "source ~/.nvm/nvm.sh && nvm use node 22 && exec zsh"]
+    }
+  },
+
+  // Set this new Zsh profile as your default for macOS
+  "terminal.integrated.defaultProfile.osx": "nvm-zsh"
+}
