@@ -48,12 +48,84 @@
   }
 }
 
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes grid-breathe {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(126, 87, 194, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(126, 87, 194, 0.6);
+  }
+}
+
 @layer utilities {
   .animate-scroll-bg {
     animation: scroll-bg 20s linear infinite;
   }
   .animate-bobbing {
     animation: bobbing 2s ease-in-out infinite;
+  }
+  .animate-gradient-shift {
+    animation: gradient-shift 15s ease infinite;
+  }
+  .animate-grid-breathe {
+    animation: grid-breathe 8s ease-in-out infinite;
+  }
+  .animate-scan-line {
+    animation: scan-line 12s linear infinite;
+  }
+  .animate-particle-float {
+    animation: particle-float 20s linear infinite;
   }
 }
 
@@ -68,28 +140,50 @@ body, html {
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #0e0a2a;
-  background-image: linear-gradient(to bottom, #1e0a5a, #0e0a2a);
+  background-image:
+    linear-gradient(135deg, #1e0a5a 0%, #0e0a2a 25%, #1a0f4a 50%, #0e0a2a 75%, #1e0a5a 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
 }
 
 .cyberpunk-container {
   width: 100%;
   min-height: 100vh;
-  background-color: #0e0a2a;
-  background-image: linear-gradient(to bottom, #1e0a5a, #0e0a2a);
   position: relative;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
+/* Animated grid layer */
 .cyberpunk-container::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(126, 87, 194, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(126, 87, 194, 0.1) 1px, transparent 1px);
+    linear-gradient(to right, rgba(126, 87, 194, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(126, 87, 194, 0.15) 1px, transparent 1px);
   background-size: 20px 20px;
+  animation: grid-breathe 8s ease-in-out infinite;
   z-index: 0;
+}
+
+/* Scanning line effect */
+.cyberpunk-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(126, 87, 194, 0.8) 50%,
+    transparent 100%);
+  box-shadow: 0 0 10px rgba(126, 87, 194, 0.5);
+  animation: scan-line 12s linear infinite;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .folder-container-neon {

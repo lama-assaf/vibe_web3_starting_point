@@ -1,5 +1,6 @@
 import Head from "next/head";
 import CyberpunkHero from "../components/CyberpunkHero";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 export default function Home() {
 	return (
@@ -12,6 +13,8 @@ export default function Home() {
 				/>
 				<link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.ico`} />
 			</Head>
+
+			<AnimatedBackground />
 
 			<main>
 				<CyberpunkHero />
