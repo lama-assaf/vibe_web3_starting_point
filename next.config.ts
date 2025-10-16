@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/vibe_web3_starting_point',
+  assetPrefix: '/vibe_web3_starting_point/',
 };
 
 export default nextConfig;
