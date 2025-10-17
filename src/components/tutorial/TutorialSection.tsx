@@ -48,16 +48,21 @@ export const TutorialSection: React.FC = () => {
   };
 
   const handleStepClick = (stepNumber: number) => {
+    console.log('Clicking on step:', stepNumber);
     const stepElement = document.getElementById(`step-${stepNumber}`);
-    if (stepElement) {
-      const offset = 100; // Offset for fixed header
-      const elementPosition = stepElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    console.log('Found element:', stepElement);
 
-      window.scrollTo({
-        top: offsetPosition,
+    if (stepElement) {
+      // Use scrollIntoView for more reliable scrolling
+      stepElement.scrollIntoView({
         behavior: 'smooth',
+        block: 'start',
       });
+
+      // Update current step immediately
+      setCurrentStep(stepNumber);
+    } else {
+      console.error(`Step element with id "step-${stepNumber}" not found`);
     }
   };
 

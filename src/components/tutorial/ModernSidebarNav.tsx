@@ -30,26 +30,61 @@ export const ModernSidebarNav: React.FC<ModernSidebarNavProps> = ({
                 <motion.button
                   key={stepNumber}
                   onClick={() => onStepClick(stepNumber)}
-                  className={`group relative w-full flex items-center gap-4 px-4 py-3 rounded-xl
-                    transition-all duration-300 text-left
+                  className={`group relative w-full flex items-center gap-4 px-4 py-3 rounded-md
+                    transition-all duration-300 text-left overflow-hidden
                     ${isActive
-                      ? 'bg-white/10 backdrop-blur-sm border border-cyan-400/30 shadow-[inset_0_0_20px_rgba(6,182,212,0.1)]'
+                      ? 'bg-white/10 backdrop-blur-sm shadow-[inset_0_0_20px_rgba(6,182,212,0.1)]'
                       : 'hover:bg-white/[0.03] border border-transparent hover:border-cyan-400/40 hover:shadow-[inset_0_0_20px_rgba(6,182,212,0.12)]'
                     }`}
                   whileHover={{ x: 4 }}
                   whileTap={{ scale: 0.98 }}
                 >
+                  {/* Active Indicator - Left gradient stroke */}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeIndicator"
+                      className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-r-md"
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
+
+                  {/* Completed Indicator - Left green stroke */}
+                  {isCompleted && !isActive && (
+                    <div className="absolute left-0 top-0 w-1 h-full bg-green-500 rounded-r-md" />
+                  )}
+
+                  {/* Gradient border for active state */}
+                  {isActive && (
+                    <div className="absolute inset-0 rounded-md" style={{
+                      background: 'linear-gradient(to bottom, rgba(6, 182, 212, 0.3), rgba(59, 130, 246, 0.3))',
+                      padding: '1px',
+                      WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                      WebkitMaskComposite: 'xor',
+                      maskComposite: 'exclude'
+                    }} />
+                  )}
+
+                  {/* Green border for completed state */}
+                  {isCompleted && !isActive && (
+                    <div className="absolute inset-0 rounded-md" style={{
+                      background: 'rgba(34, 197, 94, 0.3)',
+                      padding: '1px',
+                      WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                      WebkitMaskComposite: 'xor',
+                      maskComposite: 'exclude'
+                    }} />
+                  )}
+
                   {/* Step Number/Icon */}
                   <div
                     className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center
-                      transition-all duration-300 text-sm font-semibold
+                      transition-all duration-300 text-sm font-semibold relative z-10
                       ${isCompleted
                         ? 'bg-green-500/20 text-green-400 border border-green-400/30'
                         : isActive
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
                         : 'bg-white/5 text-gray-400 border border-white/10 group-hover:border-white/20'
                       }`}
-                    
                   >
                     {isCompleted ? (
                       <FaCheck className="w-4 h-4" />
@@ -59,24 +94,14 @@ export const ModernSidebarNav: React.FC<ModernSidebarNavProps> = ({
                   </div>
 
                   {/* Step Title */}
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 relative z-10">
                     <p
                       className={`text-sm font-medium truncate transition-colors
                         ${isActive ? 'text-white' : 'text-gray-400 group-hover:text-gray-300'}`}
-                      
                     >
                       {stepTitles[index]}
                     </p>
                   </div>
-
-                  {/* Active Indicator */}
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeIndicator"
-                      className="absolute left-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-r-full"
-                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    />
-                  )}
                 </motion.button>
               );
             })}

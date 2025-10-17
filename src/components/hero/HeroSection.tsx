@@ -36,7 +36,6 @@ export const HeroSection: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
-            
           >
             A beginner-friendly guide to start building Web3 applications
           </motion.p>
@@ -53,7 +52,7 @@ export const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-white font-medium" >
+            <span className="text-white font-medium">
               Get Started
             </span>
             <svg

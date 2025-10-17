@@ -29,6 +29,22 @@ export default function Home() {
 					<TutorialSection />
 				</div>
 
+				{/* Sticky Powered by Zilliqa Logo - Bottom Left */}
+				<div className="fixed bottom-6 left-8 z-50">
+					<a
+						href="https://www.zilliqa.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="block hover:scale-105 transition-transform duration-300"
+					>
+						<img
+							src="/logos/poweredbyzil_main.svg"
+							alt="Powered by Zilliqa"
+							className="h-10 w-auto"
+						/>
+					</a>
+				</div>
+
 				{/* Sticky Mini Folder - Bottom Right */}
 				<div className="fixed bottom-6 right-6 z-50">
 					<CyberpunkNeonFolder

@@ -19,17 +19,41 @@ export const TutorialStep: React.FC<TutorialStepProps> = ({
   onEnterView,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, {
+    once: false,
+    amount: 0.3,
+  });
   const controls = useAnimation();
 
+  // Animation effect
   useEffect(() => {
     if (isInView) {
       controls.start('visible');
-      if (onEnterView) {
-        onEnterView(stepNumber);
-      }
     }
-  }, [isInView, controls, stepNumber, onEnterView]);
+  }, [isInView, controls]);
+
+  // Separate effect for tracking current step - only trigger when center of viewport
+  useEffect(() => {
+    if (!ref.current || !onEnterView) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            onEnterView(stepNumber);
+          }
+        });
+      },
+      {
+        threshold: 0,
+        rootMargin: '-40% 0px -40% 0px', // Only trigger when step is in middle 20% of viewport
+      }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [stepNumber, onEnterView]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -60,6 +84,7 @@ export const TutorialStep: React.FC<TutorialStepProps> = ({
       animate={controls}
       variants={containerVariants}
       className="w-full max-w-4xl mx-auto px-4 md:px-6 mb-16 md:mb-24"
+      style={{ scrollMarginTop: '120px' }}
     >
       <div
         className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8
