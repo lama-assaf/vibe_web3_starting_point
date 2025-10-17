@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Snippet } from '@/components/ui/Snippet';
+import { heroContent } from '@/data/tutorialContent';
 
 export const HeroSection: React.FC = () => {
   const scrollToTutorial = () => {
@@ -25,10 +26,10 @@ export const HeroSection: React.FC = () => {
               fontWeight: 300,
             }}
           >
-            Build Web3
+            {heroContent.title.line1}
             <br />
             <span className="font-semibold bg-gradient-to-r from-blue-500 to-[#00d0c6] bg-clip-text text-transparent">
-              Starting Point
+              {heroContent.title.line2}
             </span>
           </h1>
 
@@ -38,7 +39,7 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
           >
-            Your starter web kit for building apps on the Zilliqa ecosystem. EVM-first and beginner-friendly.
+            {heroContent.description}
           </motion.p>
 
           {/* Clone Command Snippet */}
@@ -49,7 +50,7 @@ export const HeroSection: React.FC = () => {
             className="mb-8 max-w-2xl mx-auto"
           >
             <Snippet
-              text="git clone https://github.com/lukozill/web3-app-starter-kit.git"
+              text={heroContent.cloneCommand}
               type="default"
               prompt={false}
             />
@@ -68,7 +69,7 @@ export const HeroSection: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-white font-medium">
-              Get Started
+              {heroContent.ctaText}
             </span>
             <svg
               className="w-5 h-5 text-cyan-400 transition-transform group-hover:translate-x-1"

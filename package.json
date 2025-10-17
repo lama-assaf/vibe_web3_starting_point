@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate:readme": "tsx scripts/generate-readme.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -26,6 +27,7 @@
     "@types/react-dom": "18.3.7",
     "@types/three": "^0.180.0",
     "tailwindcss": "4.1.13",
+    "tsx": "^4.20.6",
     "typescript": "5"
   }
 }
