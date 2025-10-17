@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Snippet } from '@/components/ui/Snippet';
 
 export const HeroSection: React.FC = () => {
   const scrollToTutorial = () => {
@@ -24,9 +25,9 @@ export const HeroSection: React.FC = () => {
               fontWeight: 300,
             }}
           >
-            Vibe Web3
+            Build Web3
             <br />
-            <span className="font-semibold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="font-semibold bg-gradient-to-r from-blue-500 to-[#00d0c6] bg-clip-text text-transparent">
               Starting Point
             </span>
           </h1>
@@ -37,8 +38,22 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
           >
-            A beginner-friendly guide to start building Web3 applications
+            Your starter web kit for building apps on the Zilliqa ecosystem. EVM-first and beginner-friendly.
           </motion.p>
+
+          {/* Clone Command Snippet */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-8 max-w-2xl mx-auto"
+          >
+            <Snippet
+              text="git clone https://github.com/lukozill/web3-app-starter-kit.git"
+              type="default"
+              prompt={false}
+            />
+          </motion.div>
 
           {/* CTA Button */}
           <motion.button

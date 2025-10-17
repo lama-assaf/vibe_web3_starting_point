@@ -143,8 +143,8 @@ export const TutorialSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block p-6 rounded-xl bg-white/5 backdrop-blur-sm
-                    border border-white/10 hover:bg-white/[0.03] hover:border-purple-400/50
-                    hover:shadow-[inset_0_0_25px_rgba(168,85,247,0.2)]
+                    border border-white/10 hover:bg-white/[0.03] hover:border-[#00d0c6]/50
+                    hover:shadow-[inset_0_0_25px_rgba(43,146,151,0.2)]
                     transition-all duration-300"
                 >
                   <div className="flex items-center gap-6">
@@ -166,7 +166,7 @@ export const TutorialSection: React.FC = () => {
                     <p>Modern code editors with powerful features like IntelliSense, debugging, and extensions. Cursor adds AI assistance to help you code faster.</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-purple-300 mb-1">GitHub Desktop</p>
+                    <p className="font-semibold text-[#00d0c6] mb-1">GitHub Desktop</p>
                     <p>Simplifies Git operations with a visual interface. No need to memorize command-line Git commands - just point and click!</p>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export const TutorialSection: React.FC = () => {
               <ExpandableSection title="Need Help? Click for detailed instructions">
                 <div className="space-y-3 text-sm text-gray-300">
                   <p>
-                    <strong className="text-purple-300">First time using GitHub Desktop?</strong>
+                    <strong className="text-[#00d0c6]">First time using GitHub Desktop?</strong>
                   </p>
                   <ol className="list-decimal list-inside space-y-2">
                     <li>
@@ -333,21 +333,21 @@ export const TutorialSection: React.FC = () => {
               <ExpandableSection title="🤖 Example AI Prompts to Get Started">
                 <div className="space-y-3 text-sm">
                   <div className="bg-white/5 p-3 rounded-xl border border-white/10">
-                    <p className="text-purple-300 font-semibold mb-2">For Component Generation:</p>
+                    <p className="text-[#00d0c6] font-semibold mb-2">For Component Generation:</p>
                     <p className="text-gray-300">
                       "Create a WalletConnect button component that allows users to connect their MetaMask wallet.
                       Include error handling and display the connected address."
                     </p>
                   </div>
                   <div className="bg-white/5 p-3 rounded-xl border border-white/10">
-                    <p className="text-purple-300 font-semibold mb-2">For Feature Implementation:</p>
+                    <p className="text-[#00d0c6] font-semibold mb-2">For Feature Implementation:</p>
                     <p className="text-gray-300">
                       "Implement the Dashboard feature from features.md. Use React hooks for state management and
                       integrate with Web3.js to fetch wallet balance."
                     </p>
                   </div>
                   <div className="bg-white/5 p-3 rounded-xl border border-white/10">
-                    <p className="text-purple-300 font-semibold mb-2">For Debugging:</p>
+                    <p className="text-[#00d0c6] font-semibold mb-2">For Debugging:</p>
                     <p className="text-gray-300">
                       "I'm getting an error 'Cannot read property of undefined' when connecting to MetaMask. Help me
                       debug this issue."
@@ -433,8 +433,8 @@ export const TutorialSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block p-5 rounded-xl bg-white/5 backdrop-blur-sm
-                    border border-white/10 hover:bg-white/[0.03] hover:border-purple-400/50
-                    hover:shadow-[inset_0_0_25px_rgba(168,85,247,0.2)]
+                    border border-white/10 hover:bg-white/[0.03] hover:border-[#00d0c6]/50
+                    hover:shadow-[inset_0_0_25px_rgba(43,146,151,0.2)]
                     transition-all duration-300"
                 >
                   <h4 className="text-white font-semibold text-lg mb-2" >
@@ -472,7 +472,7 @@ export const TutorialSection: React.FC = () => {
                     </ol>
                   </div>
                   <div>
-                    <h5 className="text-purple-300 font-bold mb-2">Deploying to GitHub Pages:</h5>
+                    <h5 className="text-[#00d0c6] font-bold mb-2">Deploying to GitHub Pages:</h5>
                     <ol className="list-decimal list-inside space-y-2 text-gray-300">
                       <li>Run <code className="bg-white/5 px-2 py-1 rounded-md text-cyan-400 font-mono text-sm border border-white/10">npm run build</code></li>
                       <li>Push your <code className="bg-white/5 px-2 py-1 rounded-md text-cyan-400 font-mono text-sm border border-white/10">out/</code> directory to <code className="bg-white/5 px-2 py-1 rounded-md text-cyan-400 font-mono text-sm border border-white/10">gh-pages</code> branch</li>

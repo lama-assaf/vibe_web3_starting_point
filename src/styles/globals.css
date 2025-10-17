@@ -108,7 +108,7 @@ body, html {
   /* Primary Colors */
   --color-cyan: #00ffff;
   --color-blue: #3b82f6;
-  --color-purple: #9333ea;
+  --color-teal: #00d0c6;
   --color-green: #00ff00;
   --color-pink: #ff00ff;
 
@@ -130,9 +130,9 @@ body, html {
   --border-cyan-hover: rgba(6, 182, 212, 0.5);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(to right, #06b6d4, #3b82f6);
-  --gradient-accent: linear-gradient(to right, #06b6d4, #3b82f6, #9333ea);
-  --gradient-surface: linear-gradient(to bottom right, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2));
+  --gradient-primary: linear-gradient(to right, #3b82f6, #00d0c6);
+  --gradient-accent: linear-gradient(to right, #06b6d4, #3b82f6, #00d0c6);
+  --gradient-surface: linear-gradient(to bottom right, rgba(59, 130, 246, 0.2), rgba(43, 146, 151, 0.2));
 
   /* Shadows */
   --shadow-cyan-sm: 0 0 10px rgba(0, 255, 255, 0.4);

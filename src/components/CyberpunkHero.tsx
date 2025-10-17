@@ -14,7 +14,7 @@ const CyberpunkHero: React.FC = () => {
 					<div className="flex flex-col items-center mb-8 md:mb-12">
 						<div className="mb-8">
 							<CyberpunkNeonFolder
-								title="VIBE_WEB3"
+								title="WEB3_KIT"
 								href="https://github.com/lukozill/web3-app-starter-kit"
 							/>
 						</div>
@@ -25,7 +25,7 @@ const CyberpunkHero: React.FC = () => {
 								color: '#e0e0e0',
 								textShadow: '0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3)'
 							}}>
-							Vibe Web3 Starting Point
+							Build Web3 Starting Point
 						</h1>
 					</div>
 
@@ -192,7 +192,7 @@ const CyberpunkHero: React.FC = () => {
 		{/* Sticky Mini Folder - Bottom Right (60% scale) */}
 	<div className="fixed bottom-6 right-6 z-50">
 		<CyberpunkNeonFolder
-			title="VIBE_WEB3"
+			title="WEB3_KIT"
 			href="https://github.com/lukozill/web3-app-starter-kit"
 			scale={0.6}
 		/>

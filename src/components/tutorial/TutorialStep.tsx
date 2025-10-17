@@ -101,9 +101,6 @@ export const TutorialStep: React.FC<TutorialStepProps> = ({
             <div
               className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20
                 flex items-center justify-center flex-shrink-0 border border-cyan-400/20"
-              style={{
-                fontFamily: 'Poppins, sans-serif',
-              }}
             >
               <span className="text-cyan-400 text-lg md:text-xl font-semibold">{stepNumber}</span>
             </div>
@@ -125,9 +122,6 @@ export const TutorialStep: React.FC<TutorialStepProps> = ({
             <motion.h2
               variants={childVariants}
               className="text-xl md:text-2xl font-semibold text-white"
-              style={{
-                fontFamily: 'Poppins, sans-serif',
-              }}
             >
               {title}
             </motion.h2>

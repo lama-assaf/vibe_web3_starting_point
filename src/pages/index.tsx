@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Vibe Web3 Starting Point - Your Journey Begins Here</title>
+				<title>Build Web3 Starting Point - Your Journey Begins Here</title>
 				<meta
 					name="description"
 					content="A beginner-friendly tutorial to get started with Web3 development. Download your IDE, clone the repo, plan your app, and deploy!"
@@ -48,7 +48,7 @@ export default function Home() {
 				{/* Sticky Mini Folder - Bottom Right */}
 				<div className="fixed bottom-6 right-6 z-50">
 					<CyberpunkNeonFolder
-						title="VIBE_WEB3"
+						title="WEB3_KIT"
 						href="https://github.com/lukozill/web3-app-starter-kit"
 						scale={0.6}
 					/>

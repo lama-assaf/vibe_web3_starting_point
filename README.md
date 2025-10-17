@@ -1,4 +1,4 @@
-# Vibe Web3 Starting Point
+# Build Web3 Starting Point
 
 ## 1. Get yur own copy of the starter kit
 
