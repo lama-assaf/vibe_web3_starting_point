@@ -1,13 +1,13 @@
 import React from "react";
 import { FaGithub, FaDownload, FaCode, FaRocket, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import CyberneticGridShader from "@/components/ui/cybernetic-grid-shader";
+import InteractiveNeuralVortex from "@/components/ui/interactive-neural-vortex-background";
 import CyberpunkNeonFolder from "@/components/ui/cyberpunk-neon-folder";
 
 const CyberpunkHero: React.FC = () => {
 	return (
 		<>
 		<div className="cyberpunk-container">
-			<CyberneticGridShader />
+			<InteractiveNeuralVortex />
 			<div className="relative z-10 flex min-h-screen items-center justify-center p-4 md:p-6 lg:p-8">
 				<div className="w-full max-w-2xl">
 					{/* Hero Header with Animated Folder */}

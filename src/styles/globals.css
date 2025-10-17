@@ -48,12 +48,47 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @layer utilities {
   .animate-scroll-bg {
     animation: scroll-bg 20s linear infinite;
   }
   .animate-bobbing {
     animation: bobbing 2s ease-in-out infinite;
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }
 
@@ -63,11 +98,13 @@ body, html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Poppins', sans-serif;
   background-color: #000000;
+  color: #ffffff;
 }
 
 .cyberpunk-container {
