@@ -19,9 +19,8 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6"
             style={{
-              fontFamily: 'Poppins, sans-serif',
               fontWeight: 300,
             }}
           >
@@ -37,7 +36,7 @@ export const HeroSection: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
-            style={{ fontFamily: 'Poppins, sans-serif' }}
+            
           >
             A beginner-friendly guide to start building Web3 applications
           </motion.p>
@@ -54,7 +53,7 @@ export const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-white font-medium" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <span className="text-white font-medium" >
               Get Started
             </span>
             <svg

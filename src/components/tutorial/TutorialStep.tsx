@@ -110,7 +110,7 @@ export const TutorialStep: React.FC<TutorialStepProps> = ({
             <motion.div
               variants={childVariants}
               className="text-gray-200 text-sm md:text-base leading-relaxed space-y-3"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              
             >
               {content}
             </motion.div>

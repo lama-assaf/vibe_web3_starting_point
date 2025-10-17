@@ -101,10 +101,176 @@ body, html {
   scroll-behavior: smooth;
 }
 
+/* ========================================
+   CSS VARIABLES - Color Palette
+   ======================================== */
+:root {
+  /* Primary Colors */
+  --color-cyan: #00ffff;
+  --color-blue: #3b82f6;
+  --color-purple: #9333ea;
+  --color-green: #00ff00;
+  --color-pink: #ff00ff;
+
+  /* Background Colors */
+  --bg-primary: #000000;
+  --bg-surface: rgba(20, 20, 50, 0.9);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-hover: rgba(255, 255, 255, 0.03);
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-muted: #9ca3af;
+
+  /* Border Colors */
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --border-cyan: rgba(6, 182, 212, 0.4);
+  --border-cyan-hover: rgba(6, 182, 212, 0.5);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(to right, #06b6d4, #3b82f6);
+  --gradient-accent: linear-gradient(to right, #06b6d4, #3b82f6, #9333ea);
+  --gradient-surface: linear-gradient(to bottom right, rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2));
+
+  /* Shadows */
+  --shadow-cyan-sm: 0 0 10px rgba(0, 255, 255, 0.4);
+  --shadow-cyan-md: 0 0 20px rgba(0, 255, 255, 0.4);
+  --shadow-cyan-lg: 0 0 30px rgba(0, 255, 255, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.1);
+  --shadow-glow-hover: 0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 0, 255, 0.2);
+  --shadow-inset-glow: inset 0 0 30px rgba(6, 182, 212, 0.15);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Typography */
+  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Orbitron', sans-serif;
+  --letter-spacing-heading: 1.5px;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Apply folder font styling to all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  font-weight: 600;
+}
+
+/* ========================================
+   REUSABLE UTILITY CLASSES
+   ======================================== */
+
+/* Glass Card */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-cyan);
+  box-shadow: var(--shadow-inset-glow);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Background */
+.gradient-bg {
+  background: var(--gradient-primary);
+}
+
+.gradient-surface {
+  background: var(--gradient-surface);
+}
+
+/* Cyan Glow */
+.glow-cyan {
+  box-shadow: var(--shadow-cyan-md);
+}
+
+.glow-cyan-hover:hover {
+  box-shadow: var(--shadow-glow-hover);
+}
+
+/* Icon Container */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface);
+  border: 1px solid var(--border-cyan);
+}
+
+/* Step Badge */
+.step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface);
+  border: 1px solid var(--border-cyan);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Cyberpunk Button */
+.cyber-button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cyber-button:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-cyan-hover);
+  box-shadow: var(--shadow-cyan-sm);
+}
+
+/* Text Glow */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
 }
 
 .cyberpunk-container {

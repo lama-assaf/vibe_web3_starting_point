@@ -45,7 +45,7 @@ const CyberpunkHero: React.FC = () => {
 										}}>
 										1. Get your own copy of the starter kit
 									</h3>
-									<div className="text-gray-200 text-sm leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif' }}>
+									<div className="text-gray-200 text-sm leading-relaxed" >
 										Fork the starter repository using this{" "}
 										<a
 											href="https://github.com/lukozill/web3-app-starter-kit/fork"
@@ -86,7 +86,7 @@ const CyberpunkHero: React.FC = () => {
 										}}>
 										2. Get your starter kit copy on your machine
 									</h3>
-									<div className="text-gray-200 text-sm leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif' }}>
+									<div className="text-gray-200 text-sm leading-relaxed" >
 										If you don't know where to start, you first need a{" "}
 										<a
 											href="https://desktop.github.com/download/"
@@ -126,7 +126,7 @@ const CyberpunkHero: React.FC = () => {
 										}}>
 										3. Select the IDE that suits you
 									</h3>
-									<div className="text-gray-200 text-sm leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif' }}>
+									<div className="text-gray-200 text-sm leading-relaxed" >
 										The starter kit is optimized for the following IDEs:
 										<div className="mt-3 space-y-2">
 											<a
@@ -178,7 +178,7 @@ const CyberpunkHero: React.FC = () => {
 										}}>
 										4. Start doing the work
 									</h3>
-									<div className="text-gray-200 text-sm leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif' }}>
+									<div className="text-gray-200 text-sm leading-relaxed" >
 										From idea to implementation using agents
 									</div>
 								</div>

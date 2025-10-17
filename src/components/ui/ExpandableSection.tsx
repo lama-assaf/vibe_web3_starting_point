@@ -27,9 +27,6 @@ export const ExpandableSection: React.FC<ExpandableSectionProps> = ({
           text-left transition-all duration-300 group"
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
-        style={{
-          fontFamily: 'Poppins, sans-serif',
-        }}
       >
         <span className="text-white font-medium text-sm md:text-base">{title}</span>
         <motion.div
@@ -51,7 +48,7 @@ export const ExpandableSection: React.FC<ExpandableSectionProps> = ({
           >
             <div
               className="mt-2 p-4 rounded-xl bg-white/5 border border-white/10"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              
             >
               {children}
             </div>

@@ -30,9 +30,6 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ text, label = 'Copy', cl
         transition-all duration-300 text-gray-300 hover:text-white group ${className}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      style={{
-        fontFamily: 'Poppins, sans-serif',
-      }}
     >
       {copied ? (
         <>

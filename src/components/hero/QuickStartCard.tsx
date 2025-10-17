@@ -74,7 +74,7 @@ export const QuickStartCard: React.FC<QuickStartCardProps> = ({
         {/* Description */}
         <p
           className="text-gray-300 text-sm leading-relaxed"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
+          
         >
           {description}
         </p>

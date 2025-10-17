@@ -49,7 +49,7 @@ export const ModernSidebarNav: React.FC<ModernSidebarNavProps> = ({
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
                         : 'bg-white/5 text-gray-400 border border-white/10 group-hover:border-white/20'
                       }`}
-                    style={{ fontFamily: 'Poppins, sans-serif' }}
+                    
                   >
                     {isCompleted ? (
                       <FaCheck className="w-4 h-4" />
@@ -63,7 +63,7 @@ export const ModernSidebarNav: React.FC<ModernSidebarNavProps> = ({
                     <p
                       className={`text-sm font-medium truncate transition-colors
                         ${isActive ? 'text-white' : 'text-gray-400 group-hover:text-gray-300'}`}
-                      style={{ fontFamily: 'Poppins, sans-serif' }}
+                      
                     >
                       {stepTitles[index]}
                     </p>
@@ -90,10 +90,10 @@ export const ModernSidebarNav: React.FC<ModernSidebarNavProps> = ({
           {/* Current Step Display */}
           <div className="flex items-center justify-between mb-3">
             <div>
-              <p className="text-xs text-gray-400 font-medium" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <p className="text-xs text-gray-400 font-medium" >
                 {currentStep === 0 ? 'Getting Started' : `Step ${currentStep} of ${totalSteps}`}
               </p>
-              <p className="text-sm text-white font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <p className="text-sm text-white font-semibold" >
                 {currentStep === 0 ? 'Scroll to begin tutorial' : stepTitles[currentStep - 1]}
               </p>
             </div>

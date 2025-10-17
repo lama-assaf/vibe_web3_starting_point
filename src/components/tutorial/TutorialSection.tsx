@@ -16,7 +16,7 @@ import ExpandableSection from '../ui/ExpandableSection';
 export const TutorialSection: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
-  const stepTitles = ['Clone Repo', 'Plan App', 'Start Building', 'Deploy'];
+  const stepTitles = ['Prerequisites', 'Clone Repo', 'Plan App', 'Start Building', 'Deploy'];
 
   // Observer to detect when we're scrolled back to hero
   useEffect(() => {
@@ -66,16 +66,113 @@ export const TutorialSection: React.FC = () => {
       {/* Modern Sidebar Navigation */}
       <ModernSidebarNav
         currentStep={currentStep}
-        totalSteps={4}
+        totalSteps={5}
         stepTitles={stepTitles}
         onStepClick={handleStepClick}
       />
 
       {/* Tutorial Steps */}
       <div className="relative z-10">
-        {/* Step 1: Clone Your Repo */}
+        {/* Step 1: Prerequisites */}
         <TutorialStep
           stepNumber={1}
+          icon={<FaDownload />}
+          title="Prerequisites - Get Your Tools Ready"
+          onEnterView={handleStepEnterView}
+          content={
+            <div className="space-y-4">
+              <p className="text-gray-200">
+                Before you start building, you'll need to install two essential tools. Choose your preferred IDE and get GitHub Desktop for easy repository management.
+              </p>
+            </div>
+          }
+          interactiveElement={
+            <div className="space-y-6">
+              {/* IDE Section */}
+              <div>
+                <h3 className="text-white text-lg font-semibold mb-4">Step 1: Choose Your IDE</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Cursor IDE */}
+                  <a
+                    href="https://cursor.sh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block p-6 rounded-xl bg-white/5 backdrop-blur-sm
+                      border border-white/10 hover:bg-white/[0.03] hover:border-cyan-400/50
+                      hover:shadow-[inset_0_0_25px_rgba(6,182,212,0.2)]
+                      transition-all duration-300"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <img src="/logos/cursor-logo.svg" alt="Cursor IDE" className="w-20 h-20 mb-4" />
+                      <h4 className="text-white font-semibold text-lg mb-2">Cursor IDE</h4>
+                      <p className="text-cyan-400 text-sm mb-2">Recommended</p>
+                      <p className="text-gray-400 text-sm">AI-powered coding editor built for developers</p>
+                    </div>
+                  </a>
+
+                  {/* VSCode */}
+                  <a
+                    href="https://code.visualstudio.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block p-6 rounded-xl bg-white/5 backdrop-blur-sm
+                      border border-white/10 hover:bg-white/[0.03] hover:border-blue-400/50
+                      hover:shadow-[inset_0_0_25px_rgba(59,130,246,0.2)]
+                      transition-all duration-300"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <img src="/logos/vscode-logo.svg" alt="VS Code" className="w-20 h-20 mb-4" />
+                      <h4 className="text-white font-semibold text-lg mb-2">VS Code</h4>
+                      <p className="text-blue-400 text-sm mb-2">Alternative</p>
+                      <p className="text-gray-400 text-sm">Popular open-source code editor by Microsoft</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* GitHub Desktop Section */}
+              <div>
+                <h3 className="text-white text-lg font-semibold mb-4">Step 2: Install GitHub Desktop</h3>
+                <a
+                  href="https://desktop.github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block p-6 rounded-xl bg-white/5 backdrop-blur-sm
+                    border border-white/10 hover:bg-white/[0.03] hover:border-purple-400/50
+                    hover:shadow-[inset_0_0_25px_rgba(168,85,247,0.2)]
+                    transition-all duration-300"
+                >
+                  <div className="flex items-center gap-6">
+                    <img src="/logos/github-desktop.svg" alt="GitHub Desktop" className="w-20 h-20 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h4 className="text-white font-semibold text-lg mb-2">GitHub Desktop</h4>
+                      <p className="text-gray-400 text-sm">
+                        Easy-to-use Git client that makes it simple to clone repositories, commit changes, and sync with GitHub
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <ExpandableSection title="💡 Why These Tools?">
+                <div className="space-y-3 text-sm text-gray-300">
+                  <div>
+                    <p className="font-semibold text-cyan-300 mb-1">Cursor IDE / VS Code</p>
+                    <p>Modern code editors with powerful features like IntelliSense, debugging, and extensions. Cursor adds AI assistance to help you code faster.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-purple-300 mb-1">GitHub Desktop</p>
+                    <p>Simplifies Git operations with a visual interface. No need to memorize command-line Git commands - just point and click!</p>
+                  </div>
+                </div>
+              </ExpandableSection>
+            </div>
+          }
+        />
+
+        {/* Step 2: Clone Your Repo */}
+        <TutorialStep
+          stepNumber={2}
           icon={<FaFolderOpen />}
           title="Clone Your Repo Using GitHub App"
           onEnterView={handleStepEnterView}
@@ -140,9 +237,9 @@ export const TutorialSection: React.FC = () => {
           }
         />
 
-        {/* Step 2: Plan Your App */}
+        {/* Step 3: Plan Your App */}
         <TutorialStep
-          stepNumber={2}
+          stepNumber={3}
           icon={<FaFile />}
           title="Plan Your App - Write Clear Documentation"
           onEnterView={handleStepEnterView}
@@ -204,9 +301,9 @@ export const TutorialSection: React.FC = () => {
           }
         />
 
-        {/* Step 3: Start Building */}
+        {/* Step 4: Start Building */}
         <TutorialStep
-          stepNumber={3}
+          stepNumber={4}
           icon={<FaCode />}
           title="Start Building"
           onEnterView={handleStepEnterView}
@@ -266,9 +363,9 @@ export const TutorialSection: React.FC = () => {
           }
         />
 
-        {/* Step 4: Deploy */}
+        {/* Step 5: Deploy */}
         <TutorialStep
-          stepNumber={4}
+          stepNumber={5}
           icon={<FaRocket />}
           title="How to Deploy"
           onEnterView={handleStepEnterView}
@@ -293,7 +390,7 @@ export const TutorialSection: React.FC = () => {
                     hover:shadow-[inset_0_0_25px_rgba(6,182,212,0.2)]
                     transition-all duration-300"
                 >
-                  <h4 className="text-white font-semibold text-lg mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <h4 className="text-white font-semibold text-lg mb-2" >
                     Vercel
                   </h4>
                   <p className="text-gray-400 text-sm mb-3">Best for Next.js apps</p>
@@ -314,7 +411,7 @@ export const TutorialSection: React.FC = () => {
                     hover:shadow-[inset_0_0_25px_rgba(34,197,94,0.2)]
                     transition-all duration-300"
                 >
-                  <h4 className="text-white font-semibold text-lg mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <h4 className="text-white font-semibold text-lg mb-2" >
                     Netlify
                   </h4>
                   <p className="text-gray-400 text-sm mb-3">Great for static sites</p>
@@ -335,7 +432,7 @@ export const TutorialSection: React.FC = () => {
                     hover:shadow-[inset_0_0_25px_rgba(168,85,247,0.2)]
                     transition-all duration-300"
                 >
-                  <h4 className="text-white font-semibold text-lg mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <h4 className="text-white font-semibold text-lg mb-2" >
                     GitHub Pages
                   </h4>
                   <p className="text-gray-400 text-sm mb-3">Free hosting from GitHub</p>
