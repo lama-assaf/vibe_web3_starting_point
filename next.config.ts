@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   assetPrefix: '/vibe_web3_starting_point',
   images: {
     unoptimized: true
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: '/vibe_web3_starting_point'
   }
 };
 

@@ -7,7 +7,7 @@ const NyanBackground: React.FC = () => {
       <div
         className="absolute inset-0 w-[200%] h-full bg-repeat animate-scroll-bg"
         style={{
-          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/stars.png')`,
+          backgroundImage: `url('/stars.png')`,
           backgroundSize: '100px 100px'
         }}
       />
