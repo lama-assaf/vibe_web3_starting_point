@@ -108,7 +108,7 @@ export const TutorialSection: React.FC = () => {
                       transition-all duration-300"
                   >
                     <div className="flex flex-col items-center text-center">
-                      <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/cursor-logo.svg`} alt="Cursor IDE" className="w-20 h-20 mb-4" />
+                      <img src="/logos/cursor-logo.svg" alt="Cursor IDE" className="w-20 h-20 mb-4" />
                       <h4 className="text-white font-semibold text-lg mb-2">Cursor IDE</h4>
                       <p className="text-cyan-400 text-sm mb-2">Recommended</p>
                       <p className="text-gray-400 text-sm">AI-powered coding editor built for developers</p>
@@ -126,7 +126,7 @@ export const TutorialSection: React.FC = () => {
                       transition-all duration-300"
                   >
                     <div className="flex flex-col items-center text-center">
-                      <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/vscode-logo.svg`} alt="VS Code" className="w-20 h-20 mb-4" />
+                      <img src="/logos/vscode-logo.svg" alt="VS Code" className="w-20 h-20 mb-4" />
                       <h4 className="text-white font-semibold text-lg mb-2">VS Code</h4>
                       <p className="text-blue-400 text-sm mb-2">Alternative</p>
                       <p className="text-gray-400 text-sm">Popular open-source code editor by Microsoft</p>
@@ -148,7 +148,7 @@ export const TutorialSection: React.FC = () => {
                     transition-all duration-300"
                 >
                   <div className="flex items-center gap-6">
-                    <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/github-desktop.svg`} alt="GitHub Desktop" className="w-20 h-20 flex-shrink-0" />
+                    <img src="/logos/github-desktop.svg" alt="GitHub Desktop" className="w-20 h-20 flex-shrink-0" />
                     <div className="flex-1">
                       <h4 className="text-white font-semibold text-lg mb-2">GitHub Desktop</h4>
                       <p className="text-gray-400 text-sm">

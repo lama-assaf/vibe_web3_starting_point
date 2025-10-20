@@ -6,9 +6,9 @@ const NyanBackground: React.FC = () => {
       {/* Starfield Layer */}
       <div
         className="absolute inset-0 w-[200%] h-full bg-repeat animate-scroll-bg"
-        style={{ 
-          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/stars.png')`,
-          backgroundSize: '100px 100px' 
+        style={{
+          backgroundImage: `url('/stars.png')`,
+          backgroundSize: '100px 100px'
         }}
       />
     </div>

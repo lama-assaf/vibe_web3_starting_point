@@ -13,7 +13,7 @@ export default function Home() {
 					name="description"
 					content="A beginner-friendly tutorial to get started with Web3 development. Download your IDE, clone the repo, plan your app, and deploy!"
 				/>
-				<link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.ico`} />
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<main className="relative">
@@ -38,7 +38,7 @@ export default function Home() {
 						className="block hover:scale-105 transition-transform duration-300"
 					>
 						<img
-							src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/poweredbyzil_main.svg`}
+							src="/logos/poweredbyzil_main.svg"
 							alt="Powered by Zilliqa"
 							className="h-10 w-auto"
 						/>
