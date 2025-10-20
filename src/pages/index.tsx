@@ -38,7 +38,7 @@ export default function Home() {
 						className="block hover:scale-105 transition-transform duration-300"
 					>
 						<img
-							src="/logos/poweredbyzil_main.svg"
+							src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/poweredbyzil_main.svg`}
 							alt="Powered by Zilliqa"
 							className="h-10 w-auto"
 						/>
