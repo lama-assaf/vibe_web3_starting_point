@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
+  basePath: '/vibe_web3_starting_point',
   images: {
     unoptimized: true
   }
