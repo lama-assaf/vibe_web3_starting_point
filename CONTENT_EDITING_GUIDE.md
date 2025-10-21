@@ -7,7 +7,7 @@ This project uses a centralized content management system where all copy lives i
 All content is stored in: **`src/data/tutorialContent.ts`**
 
 This file contains:
-- Hero section content (title, description, clone command, CTA button text)
+- Hero section content (title, description, clones command, CTA button text)
 - All 5 tutorial steps with their complete content
 - Structured, typed data that's easy to edit
 
